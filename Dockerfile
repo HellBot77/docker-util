@@ -6,7 +6,7 @@ RUN git clone https://github.com/mat-sz/util.git && \
     ([[ "$TAG" = "latest" ]] || git checkout ${TAG}) && \
     rm -rf .git
 
-FROM node as build
+FROM node AS build
 
 WORKDIR /util
 COPY --from=base /git/util .
